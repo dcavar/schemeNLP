@@ -1,0 +1,51 @@
+# PSG1
+# small English grammar
+# (C) 2005 by Damir Cavar, Indiana University
+
+# Grammar:
+S  -> NP VP
+
+NP -> N
+NP -> Adj N
+NP -> Art Adj N
+NP -> Art N
+NP -> Art N PP
+#NP -> Art N NP
+
+VP -> V
+VP -> V NP
+VP -> Adv V NP
+VP -> V PP
+VP -> V NP PP
+
+PP -> P NP
+
+
+# Lexicon:
+N   -> John
+N   -> Mary
+N   -> bench
+N   -> cat
+N   -> mouse
+
+Art -> the
+Art -> a
+
+Adj -> green
+Adj -> yellow
+Adj -> big
+Adj -> small
+
+Adv -> often
+Adv -> yesterday
+
+V -> kissed
+V -> loves
+V -> sees
+V -> meets
+V -> chases
+
+P -> on
+P -> in
+P -> beside
+P -> under

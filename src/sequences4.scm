@@ -1,0 +1,13 @@
+(cons 1 (cons 2 (cons 3 (cons 4 5))))
+(cons 1 (cons 2 (cons 3 (cons 4 (cons 5 '())))))
+(list 1 2 3 4 5)
+'(1 2 3 4 5)
+(define mylist '(1 2 3 4 5))
+(list-ref mylist 2)
+(set-car! mylist 0)
+mylist
+(list-tail mylist 2)
+(list-tail mylist 3)
+(list? '(1 . 2))
+(pair? '(1 . 2))
+(null? '())

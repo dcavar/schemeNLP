@@ -1,0 +1,6 @@
+(string->number "32")
+(number->string 32)
+(symbol->string 'xyz)
+(string->symbol "xyz")
+(char->integer #\a)
+(integer->char 32)

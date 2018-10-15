@@ -1,0 +1,30 @@
+﻿ANA: Pregnancy Complications May Increase Stroke Risk Years Later
+By Paula Moyer, MedPage Today Staff Writer
+Reviewed by Zalman S. Agus, MD; Emeritus Professor at the University of Pennsylvania School of Medicine. 
+September 28, 2005
+Review
+
+Preeclampsia increases stroke risk. 
+SAN DIEGO, Sept. 28-Common pregnancy complications such as preeclampsia and gestational diabetes appear to increase a women's risk of stroke decades later, researchers here reported.
+
+Women with a history of either gestational diabetes or preeclampsia have roughly twice the risk for stroke as women who had uncomplicated pregnancy, said Cheryl Bushnell, M.D., of the Duke Center for Cerebrovascular Disease at Duke University in Durham, North Carolina.
+
+She reported her findings at the annual meeting of the American Neurological Association here.
+"Within this population of adverse pregnancy outcomes, there's probably a subset of women who are at extremely high risk who may be targeted for very early interventions," said Dr. Bushnell, an assistant professor of medicine at the Duke Center for Cerebrovascular Disease of Duke University Medical Center in Durham, North Carolina. "We just don't know who those women are yet."
+For now, physicians closely monitor women with a history of pregnancy complications and should take extra efforts to help them reduce any other stroke risk factors, such as hypertension, elevated cholesterol, cigarette smoking, and dietary and exercise issues, she said. The take home message, she said, is that "preeclampsia is perhaps an early signal of endothelial dysfunction and a risk of stroke later in life, and heart disease."
+But Dr. Bushnell cautioned that her findings are preliminary because the data are based on diagnostic codes, which can be miscoded, said presenting investigator Cheryl Bushnell, M.D., in an interview. However, the links were significant enough that they warrant further study.
+The investigators initiated the study because other research had shown that preeclampsia is associated with maternal cardiovascular disease later in life.
+
+The case control study included data from 42,263 women who had given birth between 1979 and 2005 at their facilities.
+
+The complications included in the analysis were abruption, preeclampsia, preterm birth, gestational diabetes, in utero fetal demise, small- and large-for-gestational-age, oligohydramnios, postpartum hemorrhage, and stillbirth.
+
+Within this group, the investigators identified 164 women who had a stroke after the postpartum period. The investigators then matched those women by age and the date of delivery to 311 women who had not had a stroke. The women who had strokes were identified by International Classification of Diseases version 9 (ICD-9) codes 430 through 439, other than non-specific codes 437.3 to 437.7. They consisted of subarachnoid hemorrhage, spontaneous intracerebral hemorrhage, and ischemic stroke.
+
+Among the women with stroke, 73% were African American, compared to 55% among the women without stroke. Dr. Bushnell said that this ethnic disparity is a finding that should be explored in future studies.
+
+The strokes occurred an average of 13.5 years after delivery, and the women were an average of 40.1 years old. The women who had strokes were 70% more likely to have had a pregnancy complication than controls (p=0.0059). However, among the complications that were considered, only preeclampsia and gestational diabetes were associated with stroke, and these complications were associated with odds ratios (ORs) of 2.06 and 2.44, respectively.
+
+In order to address the limitations of identifying risk factors by ICD-9 codes, the investigators next plan to compare the codes to the women's medical records.
+
+Primary source: American Neurological Association. 130th annual meeting. September 25-28, 2005. Abstract 222.

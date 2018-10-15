@@ -1,0 +1,44 @@
+
+# example grammar
+
+S  -> NP VP
+
+# NPs
+NP -> N
+NP -> D N
+NP -> D A N
+NP -> D N PP
+
+# VPs
+VP -> V
+VP -> V NP
+VP -> V NP NP
+VP -> V NP PP
+
+# PPs
+PP -> P NP
+
+# lexicon
+N -> dog
+N -> cat
+N -> John
+N -> Mary
+N -> bit
+N -> tie
+N -> man
+N -> woman
+
+D -> a
+D -> the
+
+A -> red
+A -> big
+
+V -> chases
+V -> loves
+V -> bit
+V -> killed
+V -> love
+
+P -> with
+P -> in

@@ -1,0 +1,87 @@
+":"; exec mzscheme -r $0 "$@"
+
+
+
+;;; all necessary libraries and functions
+(require (lib "list.ss"))
+(require (lib "string.ss"     "srfi" "13"))
+(require (lib "vector-lib.ss" "srfi" "43"))
+
+
+;;; Global variables
+(define bigramcount 0.0)                      ; total number of bigrams
+(define bigrams     (make-hash-table 'equal)) ; hash-table container for bigram-count pairs
+
+
+;;; print-wordlist
+;;; <- hash-table of key-value pairs
+;;; side effect: print out of tab-delimited key-value pairs per line
+;;; ----------------------------------------------------
+;;; Pretty print wordlist as tab-delimited key-value lines.
+(define print-bigramlist!
+  (lambda (table)
+    (hash-table-for-each table
+                         (lambda (key value)
+                           (printf "~a ~a\t~a\n" (car key) (cadr key) value)))))
+
+
+;;; sort-by-value
+;;; <- hash-table
+;;; -> list of key-value tuples (lists)
+;;; ----------------------------------------------------
+;;; Sort a hash-table of key-value pairs by value, by converting it
+;;; into a list of key-value tuples and sorting on the value.
+(define sort-by-value
+  (lambda (table)
+    (let ([keyval (hash-table-map table (lambda (key val) (list key val)))])
+      (sort keyval (lambda (a b)
+                     (< (cadr a) (cadr b)))))))
+
+
+;;; add-bigrams
+;;; <- list of strings, i.e. token list
+;;; !-> updated hash-table bigram-hash
+;;; !-> updated count-bigrams counter
+;;; ----------------------------------------------------
+;;; Add word-bigrams from an ordered list of tokens to the hash-table
+;;; container and keep track of their count.
+(define add-bigrams
+  (lambda (words)
+    (let ([count (- (length words) 1)])      ; how many bigrams
+      (set! bigramcount (+ bigramcount count)) ; remember the total count
+      (let loop ([i 1])
+        (let* ([bigram (list (list-ref words (- i 1)) (list-ref words i))]  ; create bigram
+               [value  (hash-table-get bigrams bigram 0.0)])             ; get the calue for bigram
+          (hash-table-put! bigrams bigram (+ value 1)))
+        (if (< i count)
+            (loop (+ i 1)))))))
+
+
+;;; load-file
+;;; <- string filename
+;;; -> string file content
+;;; ----------------------------------------------------
+;;; Load text from file into a string variable and return it.
+(define load-file
+  (lambda (name)
+      (call-with-input-file name
+        (lambda (p)
+          (read-string (file-size name) p)))))
+
+
+;;; main steps
+(begin 
+  (vector-for-each (lambda (i fname)
+                     (printf "Loading file: ~a\n" fname)
+                     (add-bigrams (string-tokenize (load-file fname))))
+                   argv)
+  (printf "Number of tokens: ~a\n" bigramcount)
+  (printf "Number of types: ~a\n" (hash-table-count bigrams))
+  (printf "---------------------------------------------------------\n")
+  ;(print-bigramlist! bigrams)
+  (let ([result (sort-by-value bigrams)])
+    (printf "Decreasing frequency profile:\n")
+    (for-each (lambda (a)
+                (let ([bigram (car a)])
+                  (printf "~a ~a\t~a\n" (car bigram) (cadr bigram) (cadr a))))
+              (reverse result))))
